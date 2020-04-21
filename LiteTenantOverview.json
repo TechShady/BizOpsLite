@@ -105,7 +105,7 @@
    "bounds": {
     "top": 304,
     "left": 570,
-    "width": 494,
+    "width": 532,
     "height": 380
    },
    "tileFilter": {
@@ -122,7 +122,7 @@
    "configured": true,
    "bounds": {
     "top": 304,
-    "left": 1102,
+    "left": 1140,
     "width": 532,
     "height": 380
    },
@@ -140,7 +140,7 @@
    "configured": true,
    "bounds": {
     "top": 684,
-    "left": 836,
+    "left": 874,
     "width": 266,
     "height": 114
    },
@@ -159,7 +159,7 @@
    "configured": true,
    "bounds": {
     "top": 684,
-    "left": 1102,
+    "left": 1140,
     "width": 266,
     "height": 114
    },
@@ -178,7 +178,7 @@
    "configured": true,
    "bounds": {
     "top": 684,
-    "left": 1368,
+    "left": 1406,
     "width": 266,
     "height": 114
    },

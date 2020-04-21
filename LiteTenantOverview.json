@@ -39,7 +39,7 @@
    },
    "customName": "Duration",
    "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", avg(useraction.duration) as \"Duration\" from useraction",
-   "type": "COLUMN_CHART"
+   "type": "LINE_CHART"
   },
   {
    "name": "User Sessions Query",
@@ -57,7 +57,7 @@
    },
    "customName": "Visually Complete",
    "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", AVG(visuallyCompleteTime) as \"Visually Complete\" from useraction",
-   "type": "COLUMN_CHART"
+   "type": "LINE_CHART"
   },
   {
    "name": "User Sessions Query",
@@ -75,7 +75,7 @@
    },
    "customName": "Speed Index",
    "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", AVG(speedIndex) as \"Speed Index\" from useraction",
-   "type": "COLUMN_CHART"
+   "type": "LINE_CHART"
   },
   {
    "name": "User Sessions Query",
@@ -332,10 +332,10 @@
       "tileType": "HEADER",
       "configured": true,
       "bounds": {
-        "top": 798,
-        "left": 266,
-        "width": 266,
-        "height": 38
+            "top": 798,
+            "left": 874,
+            "width": 266,
+            "height": 38
       },
       "tileFilter": {
         "timeframe": null,
@@ -363,32 +363,16 @@
    "tileType": "MARKDOWN",
    "configured": true,
    "bounds": {
-    "top": 836,
-    "left": 266,
-    "width": 266,
-    "height": 494
+            "top": 836,
+            "left": 874,
+            "width": 266,
+            "height": 494
    },
    "tileFilter": {
     "timeframe": null,
     "managementZone": null
    },
    "markdown": "![Infrastructure Links1]()\n## [Host Overview](#dashboard;id=af663a92-726d-494f-addd-3e92461da888)"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 836,
-    "left": 1140,
-    "width": 266,
-    "height": 494
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "![Custom Links1]()\n"
   }
 	]
 }

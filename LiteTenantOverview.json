@@ -342,37 +342,6 @@
         "managementZone": null
       }
     },
-    {
-      "name": "Custom Links \u25BC",
-      "tileType": "HEADER",
-      "configured": true,
-      "bounds": {
-        "top": 798,
-        "left": 1140,
-        "width": 266,
-        "height": 38
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      }
-    },
-    {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-        "top": 798,
-        "left": 1406,
-        "width": 266,
-        "height": 38
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-   },
-   "markdown": "## [Dashboard List](#dashboards)"
-    },
   {
    "name": "Markdown",
    "tileType": "MARKDOWN",

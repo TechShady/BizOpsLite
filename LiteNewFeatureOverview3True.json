@@ -7,7 +7,7 @@
  },
  "id": "8149758a-c29a-4e3b-96ed-b073438da888",
  "dashboardMetadata": {
-  "name": "\ud83c\udfae MyFunnel New Feature Overview",
+  "name": "\ud83c\udfae MyFunnel New Feature Overview - Abandons",
   "shared": true,
   "owner": "MyEmail",
   "sharingDetails": {
@@ -17,7 +17,8 @@
   "dashboardFilter": {
    "timeframe": "l_2_HOURS",
    "managementZone": null
-  }
+  },
+	"tags": ["MyApp","New Feature","Overview"]
  },
  "tiles": [
   {

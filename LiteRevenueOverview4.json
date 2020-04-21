@@ -7,7 +7,7 @@
   },
   "id": "4bb5be20-8833-4af1-a847-2f84cb5da888",
   "dashboardMetadata": {
-    "name": "\ud83d\udd0e MyFunnel Revenue Overview",
+    "name": "\ud83d\udd0e MyFunnel Revenue Overview - Avg Risk Revenue",
     "shared": true,
     "owner": "MyEmail",
     "sharingDetails": {
@@ -17,7 +17,8 @@
     "dashboardFilter": {
       "timeframe": "l_2_HOURS",
       "managementZone": null
-    }
+    },
+    "tags": ["MyApp","Overview","Revenue"]
   },
   "tiles": [
     {

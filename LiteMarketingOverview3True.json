@@ -7,7 +7,7 @@
  },
  "id": "0149758a-c29a-4e3b-96ed-b073438da888",
  "dashboardMetadata": {
-  "name": "\u2615 MyFunnel Marketing Overview",
+  "name": "\u2615 MyFunnel Marketing Overview - Abandons",
   "shared": true,
   "owner": "MyEmail",
   "sharingDetails": {
@@ -17,7 +17,8 @@
   "dashboardFilter": {
    "timeframe": "l_2_HOURS",
    "managementZone": null
-  }
+  },
+	"tags": ["MyApp","Overview","Marketing"]
  },
  "tiles": [
   {

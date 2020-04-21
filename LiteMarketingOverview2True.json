@@ -7,7 +7,7 @@
  },
  "id": "21e4da5e-d4c7-4816-9d31-6698719da888",
  "dashboardMetadata": {
-  "name": "\u2615 MyFunnel Marketing Overview",
+  "name": "\u2615 MyFunnel Marketing Overview - Conversions",
   "shared": true,
   "owner": "MyEmail",
   "sharingDetails": {
@@ -17,7 +17,8 @@
   "dashboardFilter": {
    "timeframe": "l_2_HOURS",
    "managementZone": null
-  }
+  },
+	"tags": ["MyApp","Overview","Marketing"]
  },
  "tiles": [
   {

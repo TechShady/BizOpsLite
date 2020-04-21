@@ -28,60 +28,6 @@
    "tileType": "DTAQL",
    "configured": true,
    "bounds": {
-    "top": 304,
-    "left": 0,
-    "width": 532,
-    "height": 380
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "Duration",
-   "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", avg(useraction.duration) as \"Duration\" from useraction",
-   "type": "LINE_CHART"
-  },
-  {
-   "name": "User Sessions Query",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 304,
-    "left": 570,
-    "width": 532,
-    "height": 380
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "Visually Complete",
-   "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", AVG(visuallyCompleteTime) as \"Visually Complete\" from useraction",
-   "type": "LINE_CHART"
-  },
-  {
-   "name": "User Sessions Query",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 304,
-    "left": 1140,
-    "width": 532,
-    "height": 380
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "Speed Index",
-   "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", AVG(speedIndex) as \"Speed Index\" from useraction",
-   "type": "LINE_CHART"
-  },
-  {
-   "name": "User Sessions Query",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
     "top": 684,
     "left": 0,
     "width": 266,
@@ -139,8 +85,62 @@
    "tileType": "DTAQL",
    "configured": true,
    "bounds": {
+    "top": 304,
+    "left": 0,
+    "width": 532,
+    "height": 380
+   },
+   "tileFilter": {
+    "timeframe": null,
+    "managementZone": null
+   },
+   "customName": "Requests",
+   "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", count(*) as \"Requests\" from usersession",
+   "type": "LINE_CHART"
+  },
+  {
+   "name": "User Sessions Query",
+   "tileType": "DTAQL",
+   "configured": true,
+   "bounds": {
+    "top": 304,
+    "left": 570,
+    "width": 494,
+    "height": 380
+   },
+   "tileFilter": {
+    "timeframe": null,
+    "managementZone": null
+   },
+   "customName": "Duration",
+   "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", avg(useraction.duration) as \"Duration\" from usersession",
+   "type": "LINE_CHART"
+  },
+  {
+   "name": "User Sessions Query",
+   "tileType": "DTAQL",
+   "configured": true,
+   "bounds": {
+    "top": 304,
+    "left": 1102,
+    "width": 532,
+    "height": 380
+   },
+   "tileFilter": {
+    "timeframe": null,
+    "managementZone": null
+   },
+   "customName": "Errors",
+   "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", sum(useraction.errorcount) as \"Errors\" from usersession",
+   "type": "LINE_CHART"
+  },
+  {
+   "name": "User Sessions Query",
+   "tileType": "DTAQL",
+   "configured": true,
+   "bounds": {
     "top": 684,
-    "left": 874,
+    "left": 836,
     "width": 266,
     "height": 114
    },
@@ -149,7 +149,7 @@
     "managementZone": null
    },
    "customName": " ",
-   "query": "select PERCENTILE(duration,90) as \"Duration 90th Percentile\" from useraction",
+   "query": "select count(*) as \"Requests\" from useraction",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -159,7 +159,7 @@
    "configured": true,
    "bounds": {
     "top": 684,
-    "left": 1140,
+    "left": 1102,
     "width": 266,
     "height": 114
    },
@@ -168,7 +168,7 @@
     "managementZone": null
    },
    "customName": " ",
-   "query": "select PERCENTILE(visuallyCompleteTime,90) as \"Visually Complete 90th Percentile\" from useraction",
+   "query": "select avg(useraction.duration) as \"Duration\" from useraction",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -178,7 +178,7 @@
    "configured": true,
    "bounds": {
     "top": 684,
-    "left": 1406,
+    "left": 1368,
     "width": 266,
     "height": 114
    },
@@ -187,7 +187,7 @@
     "managementZone": null
    },
    "customName": " ",
-   "query": "select PERCENTILE(speedIndex,90) as \"Speed Index 90th Percentile\" from useraction",
+   "query": "select sum(useraction.errorcount) as \"Errors\" from useraction",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },

@@ -149,7 +149,7 @@
     "managementZone": null
    },
    "customName": " ",
-   "query": "select PERCENTILE(duration,90) as \"Duration 90th Percentile\" from useraction where useraction.application=\"MyApp\"",
+   "query": "select count(*) as \"Requests\" from useraction where useraction.application=\"MyApp\"",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -168,7 +168,7 @@
     "managementZone": null
    },
    "customName": " ",
-   "query": "select PERCENTILE(visuallyCompleteTime,90) as \"Visually Complete 90th Percentile\" from useraction where useraction.application=\"MyApp\"",
+   "query": "select avg(useraction.duration) as \"Duration\" from useraction where useraction.application=\"MyApp\"",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -187,7 +187,7 @@
     "managementZone": null
    },
    "customName": " ",
-   "query": "select PERCENTILE(speedIndex,90) as \"Speed Index 90th Percentile\" from useraction where useraction.application=\"MyApp\"",
+   "query": "select sum(useraction.errorcount) as \"Errors\" from useraction where useraction.application=\"MyApp\"",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },

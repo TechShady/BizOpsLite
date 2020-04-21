@@ -324,6 +324,18 @@
     "managementZone": null
    },
       "markdown": "![BackButton]()"
-  }
+  },
+    {
+        "name": "Compare Links ▼",
+        "tileType": "HEADER",
+        "configured": true,
+        "bounds": {
+            "top": 798,
+            "left": 836,
+            "width": 266,
+            "height": 38
+        },
+        "tileFilter": {}
+}
  ]
 }

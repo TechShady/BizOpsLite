@@ -1,0 +1,360 @@
+{
+ "metadata": {
+  "configurationVersions": [
+   2
+  ],
+  "clusterVersion": "1.179.6.20190927-171452"
+ },
+ "id": "fbe8d3b1-ccb9-480c-9e5d-0e1b8b3da888",
+ "dashboardMetadata": {
+  "name": "\ud83d\ude80 MyApp Portal",
+  "shared": true,
+  "owner": "MyEmail",
+  "sharingDetails": {
+   "linkShared": true,
+   "published": true
+  },
+  "dashboardFilter": {
+   "timeframe": "l_2_HOURS",
+   "managementZone": null
+  },
+    "tags": ["MyApp",
+      "Portal"
+    ]
+ },
+ "tiles": [
+  {
+   "name": "User Sessions Query",
+   "tileType": "DTAQL",
+   "configured": true,
+   "bounds": {
+    "top": 684,
+    "left": 0,
+    "width": 266,
+    "height": 114
+   },
+   "tileFilter": {
+    "timeframe": null,
+    "managementZone": null
+   },
+   "customName": " ",
+   "query": "select count(usersessionid) as \"Satisfied Users\" from usersession where useraction.application=\"MyApp\"  and userExperienceScore=\"SATISFIED\"",
+   "type": "SINGLE_VALUE",
+   "timeFrameShift": "dynamic"
+  },
+  {
+   "name": "DTAQL",
+   "tileType": "DTAQL",
+   "configured": true,
+   "bounds": {
+    "top": 684,
+    "left": 266,
+    "width": 266,
+    "height": 114
+   },
+   "tileFilter": {
+    "timeframe": null,
+    "managementZone": null
+   },
+   "customName": " ",
+   "query": "select count(usersessionid) as \"Tolerated Users\" from usersession where useraction.application=\"MyApp\"  and userExperienceScore=\"TOLERATED\"",
+   "type": "SINGLE_VALUE",
+   "timeFrameShift": "dynamic"
+  },
+  {
+   "name": "DTAQL",
+   "tileType": "DTAQL",
+   "configured": true,
+   "bounds": {
+    "top": 684,
+    "left": 532,
+    "width": 266,
+    "height": 114
+   },
+   "tileFilter": {
+    "timeframe": null,
+    "managementZone": null
+   },
+   "customName": " ",
+   "query": "select count(usersessionid) as \"Frustrated Users\" from usersession where useraction.application=\"MyApp\"  and userExperienceScore=\"FRUSTRATED\"",
+   "type": "SINGLE_VALUE",
+   "timeFrameShift": "dynamic"
+  },
+  {
+   "name": "User Sessions Query",
+   "tileType": "DTAQL",
+   "configured": true,
+   "bounds": {
+    "top": 304,
+    "left": 0,
+    "width": 532,
+    "height": 380
+   },
+   "tileFilter": {
+    "timeframe": null,
+    "managementZone": null
+   },
+   "customName": "Duration",
+   "query": "select useraction.application,percentile(useraction.duration,90) as \"90 Percentile\",percentile(useraction.duration,80) as \"80 Percentile\",percentile(useraction.duration,70) as \"70 Percentile\",percentile(useraction.duration,60) as \"60 Percentile\",percentile(useraction.duration,50) as \"50 Percentile\",percentile(useraction.duration,40) as \"40 Percentile\",percentile(useraction.duration,30) as \"30 Percentile\",percentile(useraction.duration,20) as \"20 Percentile\",percentile(useraction.duration,10) as \"10 Percentile\"from usersession where useraction.application=\"MyApp\"  group by useraction.application",
+   "type": "COLUMN_CHART"
+  },
+  {
+   "name": "User Sessions Query",
+   "tileType": "DTAQL",
+   "configured": true,
+   "bounds": {
+    "top": 304,
+    "left": 570,
+    "width": 494,
+    "height": 380
+   },
+   "tileFilter": {
+    "timeframe": null,
+    "managementZone": null
+   },
+   "customName": "Visually Complete",
+   "query": "select useraction.application,percentile(useraction.visuallycompletetime,90) as \"90 Percentile\",percentile(useraction.visuallycompletetime,80) as \"80 Percentile\",percentile(useraction.visuallycompletetime,70) as \"70 Percentile\",percentile(useraction.visuallycompletetime,60) as \"60 Percentile\",percentile(useraction.visuallycompletetime,50) as \"50 Percentile\",percentile(useraction.visuallycompletetime,40) as \"40 Percentile\",percentile(useraction.visuallycompletetime,30) as \"30 Percentile\",percentile(useraction.visuallycompletetime,20) as \"20 Percentile\",percentile(useraction.visuallycompletetime,10) as \"10 Percentile\"from usersession where useraction.application=\"MyApp\"  group by useraction.application",
+   "type": "COLUMN_CHART"
+  },
+  {
+   "name": "User Sessions Query",
+   "tileType": "DTAQL",
+   "configured": true,
+   "bounds": {
+    "top": 304,
+    "left": 1102,
+    "width": 532,
+    "height": 380
+   },
+   "tileFilter": {
+    "timeframe": null,
+    "managementZone": null
+   },
+   "customName": "Speed Index",
+   "query": "select useraction.application,percentile(useraction.speedindex,90) as \"90 Percentile\",percentile(useraction.speedindex,80) as \"80 Percentile\",percentile(useraction.speedindex,70) as \"70 Percentile\",percentile(useraction.speedindex,60) as \"60 Percentile\",percentile(useraction.speedindex,50) as \"50 Percentile\",percentile(useraction.speedindex,40) as \"40 Percentile\",percentile(useraction.speedindex,30) as \"30 Percentile\",percentile(useraction.speedindex,20) as \"20 Percentile\",percentile(useraction.speedindex,10) as \"10 Percentile\"from usersession where useraction.application=\"MyApp\"  group by useraction.application",
+   "type": "COLUMN_CHART"
+  },
+  {
+   "name": "User Sessions Query",
+   "tileType": "DTAQL",
+   "configured": true,
+   "bounds": {
+    "top": 684,
+    "left": 836,
+    "width": 266,
+    "height": 114
+   },
+   "tileFilter": {
+    "timeframe": null,
+    "managementZone": null
+   },
+   "customName": " ",
+   "query": "select PERCENTILE(duration,90) as \"Duration 90th Percentile\" from useraction where useraction.application=\"MyApp\"",
+   "type": "SINGLE_VALUE",
+   "timeFrameShift": "dynamic"
+  },
+  {
+   "name": "User Sessions Query",
+   "tileType": "DTAQL",
+   "configured": true,
+   "bounds": {
+    "top": 684,
+    "left": 1102,
+    "width": 266,
+    "height": 114
+   },
+   "tileFilter": {
+    "timeframe": null,
+    "managementZone": null
+   },
+   "customName": " ",
+   "query": "select PERCENTILE(visuallyCompleteTime,90) as \"Visually Complete 90th Percentile\" from useraction where useraction.application=\"MyApp\"",
+   "type": "SINGLE_VALUE",
+   "timeFrameShift": "dynamic"
+  },
+  {
+   "name": "User Sessions Query",
+   "tileType": "DTAQL",
+   "configured": true,
+   "bounds": {
+    "top": 684,
+    "left": 1368,
+    "width": 266,
+    "height": 114
+   },
+   "tileFilter": {
+    "timeframe": null,
+    "managementZone": null
+   },
+   "customName": " ",
+   "query": "select PERCENTILE(speedIndex,90) as \"Speed Index 90th Percentile\" from useraction where useraction.application=\"MyApp\"",
+   "type": "SINGLE_VALUE",
+   "timeFrameShift": "dynamic"
+  },
+  {
+   "name": "Markdown",
+   "tileType": "MARKDOWN",
+   "configured": true,
+   "bounds": {
+    "top": 836,
+    "left": 0,
+    "width": 266,
+    "height": 494
+   },
+   "tileFilter": {
+    "timeframe": null,
+    "managementZone": null
+   },
+   "markdown": "![Funnel Links1]()\n"
+  },
+ {
+   "name": "Markdown",
+   "tileType": "MARKDOWN",
+   "configured": true,
+   "bounds": {
+    "top": 836,
+    "left": 266,
+    "width": 266,
+    "height": 494
+   },
+   "tileFilter": {
+    "timeframe": null,
+    "managementZone": null
+   },
+   "markdown": "![Compare Links1]()\n## [Release Validation](#dashboard;id=56d9f8de-c0d1-4b91-8930-6641a73da888)"
+  },
+  {
+   "name": "User behavior",
+   "tileType": "SESSION_METRICS",
+   "configured": true,
+   "bounds": {
+    "top": 0,
+    "left": 342,
+    "width": 304,
+    "height": 304
+   },
+   "tileFilter": {
+    "timeframe": null,
+    "managementZone": null
+   },
+   "assignedEntities": [
+    "InternalAppID"
+   ]
+  },
+  {
+   "name": "User breakdown",
+   "tileType": "USERS",
+   "configured": true,
+   "bounds": {
+    "top": 0,
+    "left": 988,
+    "width": 304,
+    "height": 304
+   },
+   "tileFilter": {
+    "timeframe": null,
+    "managementZone": null
+   },
+   "assignedEntities": [
+    "InternalAppID"
+   ]
+  },
+  {
+   "name": "JavaScript errors",
+   "tileType": "UEM_JSERRORS_OVERALL",
+   "configured": true,
+   "bounds": {
+    "top": 0,
+    "left": 684,
+    "width": 266,
+    "height": 304
+   },
+   "tileFilter": {
+    "timeframe": null,
+    "managementZone": null
+   },
+   "assignedEntities": [
+    "InternalAppID"
+   ]
+  },
+  {
+   "name": "Web application",
+   "tileType": "APPLICATION",
+   "configured": true,
+   "bounds": {
+    "top": 0,
+    "left": 1330,
+    "width": 304,
+    "height": 304
+   },
+   "tileFilter": {
+    "timeframe": null,
+    "managementZone": null
+   },
+   "assignedEntities": [
+    "InternalAppID"
+   ]
+  },
+  {
+   "name": "Live user activity",
+   "tileType": "UEM_ACTIVE_SESSIONS",
+   "configured": true,
+   "bounds": {
+    "top": 0,
+    "left": 0,
+    "width": 304,
+    "height": 304
+   },
+   "tileFilter": {
+    "timeframe": null,
+    "managementZone": null
+   }
+  },
+          {
+      "name": "User Journey Links \u25BC",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 798,
+        "left": 0,
+        "width": 266,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      }
+    },
+    {
+      "name": "Compare Links \u25BC",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 798,
+        "left": 266,
+        "width": 266,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      }
+    },
+  {
+   "name": "Markdown",
+   "tileType": "MARKDOWN",
+   "configured": true,
+   "bounds": {
+    "top": 0,
+    "left": 1634,
+    "width": 38,
+    "height": 38
+   },
+   "tileFilter": {
+    "timeframe": null,
+    "managementZone": null
+   },
+      "markdown": "![BackButton]()"
+  }
+ ]
+}

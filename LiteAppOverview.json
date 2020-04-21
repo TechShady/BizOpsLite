@@ -94,8 +94,8 @@
     "timeframe": null,
     "managementZone": null
    },
-   "customName": "Duration",
-   "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", avg(useraction.duration) as \"Duration\" from usersession where useraction.application=\"MyApp\"",
+   "customName": "Requests",
+   "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", count(*) as \"Requests\" from usersession where useraction.application=\"MyApp\"",
    "type": "LINE_CHART"
   },
   {
@@ -112,8 +112,8 @@
     "timeframe": null,
     "managementZone": null
    },
-   "customName": "Visually Complete",
-   "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", avg(useraction.visuallycompletetime) as \"Visually Complete\" from usersession where useraction.application=\"MyApp\"  group by useraction.application",
+   "customName": "Duration",
+   "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", avg(useraction.duration) as \"Duration\" from usersession where useraction.application=\"MyApp\"",
    "type": "LINE_CHART"
   },
   {
@@ -130,8 +130,8 @@
     "timeframe": null,
     "managementZone": null
    },
-   "customName": "Speed Index",
-   "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", avg(useraction.speedindex) as \"Speed Index\" from usersession where useraction.application=\"MyApp\"  group by useraction.application",
+   "customName": "Errors",
+   "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", sum(useraction.errorcount) as \"Errors\" from usersession where useraction.application=\"MyApp\"",
    "type": "LINE_CHART"
   },
   {

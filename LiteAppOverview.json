@@ -207,22 +207,6 @@
    },
    "markdown": "![Funnel Links1]()\n"
   },
- {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 836,
-    "left": 266,
-    "width": 266,
-    "height": 494
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "![Compare Links1]()\n## [Release Validation](#dashboard;id=56d9f8de-c0d1-4b91-8930-6641a73da888)"
-  },
   {
    "name": "User behavior",
    "tileType": "SESSION_METRICS",
@@ -317,21 +301,6 @@
       "bounds": {
         "top": 798,
         "left": 0,
-        "width": 266,
-        "height": 38
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      }
-    },
-    {
-      "name": "Compare Links \u25BC",
-      "tileType": "HEADER",
-      "configured": true,
-      "bounds": {
-        "top": 798,
-        "left": 266,
         "width": 266,
         "height": 38
       },

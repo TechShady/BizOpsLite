@@ -327,21 +327,6 @@
         "managementZone": null
       }
     },
-        {
-      "name": "Overview Links \u25BC",
-      "tileType": "HEADER",
-      "configured": true,
-      "bounds": {
-            "top": 798,
-            "left": 874,
-            "width": 266,
-            "height": 38
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      }
-    },
   {
    "name": "Markdown",
    "tileType": "MARKDOWN",
@@ -357,22 +342,6 @@
     "managementZone": null
    },
    "markdown": "![Application Links1]()\n"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-            "top": 836,
-            "left": 874,
-            "width": 266,
-            "height": 494
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "![Infrastructure Links1]()\n## [Host Overview](#dashboard;id=af663a92-726d-494f-addd-3e92461da888)"
   }
 	]
 }
